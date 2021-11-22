@@ -1,0 +1,191 @@
+/*
+Minimal Theme
+for Accordion Gallery
+
+Ghinda - Cristian Colceriu
+www.ghinda.net
+
+v1.0 - 7:40 PM 11/8/2010
+*/
+
+/* General */
+.accordiongallery.minimal {
+	overflow: hidden;
+	padding: 5px;
+
+	font-family: Arial, Helvetica, 'Bitstream Vera Sans', sans-serif;	
+	font-size: 11px;
+	color: #fff;
+}
+/* Sections */
+.accordiongallery.minimal section h1 {
+	margin: 0px;
+	padding: 10px 15px;
+	border-bottom: 1px dotted #aaa;
+	
+	color: #333;
+	font-weight: normal;
+	font-size: 13px;
+	cursor: default;
+}
+.accordiongallery.minimal section {
+	position: relative;
+	width: 150px;	
+	margin-right: 1px;
+	background-color: #fff;	
+	
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+.accordiongallery.minimal .inactive-section a {
+	opacity: 0;
+	visibility: hidden;
+}
+.accordiongallery.minimal .inactive-section h1 {
+	padding: 5px;	
+	
+	-moz-transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	transform: rotate(90deg);	
+	-webkit-transition: all 500ms ease-in-out;
+	-moz-transition: all 500ms ease-in-out;
+	-o-transition: all 500ms ease-in-out;
+	transition: all 500ms ease-in-out;	
+}
+.accordiongallery.minimal .inactive-section:hover {
+	color: #fff;
+	background-color: #ff6893;
+}
+/* Vertical Thumbs */
+.accordiongallery.minimal section .accordiongallery-thumbs a {
+	display: block;	
+	overflow: hidden;
+	padding: 5px;		
+	
+	color: #868686;
+	font-weight: normal;
+	text-align: center;
+	text-decoration: none;
+}
+.accordiongallery.minimal section .accordiongallery-thumbs a img {
+	border: 0px;
+}
+.accordiongallery.minimal section .accordiongallery-thumbs a p {
+	margin: 0px;
+}
+.accordiongallery.minimal section .accordiongallery-thumbs a:hover {
+	background-color: #ef255c;
+	color: #fff;
+}
+/* Vertical Scroller */
+.accordiongallery.minimal .accordiongallery-scrollup, .accordiongallery.minimal .accordiongallery-scrolldown {
+	display: block;	
+	height: 10px;
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-image: url(minimal-arrow-vertical.png);
+	
+	cursor: default;
+	text-indent: -9999px;	
+	opacity: 0.6;
+}
+.accordiongallery.minimal .accordiongallery-scrollup:hover, .accordiongallery.minimal .accordiongallery-scrolldown:hover {
+	opacity: 1;
+}
+.accordiongallery.minimal .accordiongallery-scrolldown {
+	background-position: bottom center;
+}
+/* Image View */
+.accordiongallery.minimal .accordiongallery-preview {	
+	overflow: hidden;
+	opacity: 0;
+	
+	-webkit-transition: all 500ms ease-in-out;
+	-moz-transition: all 500ms ease-in-out;
+	-o-transition: all 500ms ease-in-out;
+	transition: all 500ms ease-in-out;
+}
+/* Loader */
+.accordiongallery.minimal .accordiongallery-loader {
+	position: absolute;
+	display: block;
+	top: 200px;
+	left: 230px;
+	width: 35px;
+	height: 35px;
+	z-index: 10;
+	text-indent: -999px;
+	
+	background-color: #fff;
+	background-image: url(minimal-loader.gif);
+	background-repeat: no-repeat;	
+	background-position: center center;
+	
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+/* Enlarged Image */
+.accordiongallery.minimal .accordiongallery-preview .accordiongallery-active-image {
+	position: relative;	
+	margin-bottom: 10px;
+	z-index: 1;
+}
+/* Horizontal Scrollers */
+.accordiongallery.minimal .accordiongallery-scrollleft, .accordiongallery.minimal .accordiongallery-scrollright {		
+	width: 10px;
+	height: 35px;	
+	text-indent: -9999px;
+	
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-image: url(minimal-arrow-horizontal.png);
+	
+	opacity: 0.6;
+}
+.accordiongallery.minimal .accordiongallery-scrollright {
+	float: right;
+	background-position: right center;
+}
+.accordiongallery.minimal .accordiongallery-scrollleft:hover, .accordiongallery.minimal .accordiongallery-scrollright:hover {	
+	opacity: 1;
+}
+/* Horizontal Thumbs */
+.accordiongallery.minimal .accordiongallery-preview-thumbs {
+	width: 480px;
+}
+.accordiongallery.minimal .accordiongallery-preview-thumbs a {
+	margin-right: 5px;	
+	opacity: 0.7;
+}
+.accordiongallery.minimal .accordiongallery-preview-thumbs a img {
+	border: 0px;
+}
+.accordiongallery.minimal .accordiongallery-preview-thumbs a:hover {
+	opacity: 1;
+}
+.accordiongallery.minimal .accordiongallery-preview-scroller a img {
+	width: 50px;
+	height: auto;
+}
+.accordiongallery.minimal .accordiongallery-preview-scroller a p {
+	display: none;
+}
+/* Image Caption */
+.accordiongallery.minimal .accordiongallery-preview .image-caption {
+	position: absolute;
+	margin-top: -44px;
+	width: 500px;
+	padding: 10px 0px;		
+	background-color: #fff;
+	background-color: rgba(255, 255, 255, 0.7);
+	
+	cursor: default;
+	color: #000;
+	text-align: center;
+	text-shadow: 0px 1px 1px #fff;
+	
+	z-index: 2;
+}

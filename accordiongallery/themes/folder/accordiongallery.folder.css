@@ -1,0 +1,179 @@
+/*
+Folder Theme
+for Accordion Gallery
+
+Ghinda - Cristian Colceriu
+www.ghinda.net
+
+v1.0 - 7:40 PM 11/8/2010
+*/
+
+/* General */
+.accordiongallery.folder {
+	overflow: hidden;
+	padding: 10px;
+	
+	font-family: Arial, Helvetica, 'Bitstream Vera Sans', sans-serif;
+	font-size: 11px;
+}
+/* Sections */
+.accordiongallery.folder section h1 {
+	margin: 0px;
+	padding: 10px;
+	cursor: default;
+	
+	color: #333;
+	font-weight: bold;
+	font-size: 16px;	
+	line-height: 1em;
+	text-shadow: 0px 1px 0px #f8c680;
+}
+.accordiongallery.folder section {
+	position: relative;
+	width: 150px;	
+	border: 1px solid #fff4a9;
+	margin-right: -5px;
+	background-color: #e8b708;	
+	background-image: -moz-linear-gradient(top, #e8b708, #eeda4c);
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #e8b708),color-stop(1, #eeda4c));	
+
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	
+	-moz-box-shadow: -3px 0px 5px #888;
+	-webkit-box-shadow: -3px 0px 5px #888;
+	box-shadow: -3px 0px 5px #888;
+}
+.accordiongallery.folder section:hover {
+	background-color: #ef900e;	
+	background-image: -moz-linear-gradient(top, #ef900e, #fac781);
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #ef900e),color-stop(1, #fac781));
+	
+	-moz-box-shadow: -3px 0px 7px #777;
+	-webkit-box-shadow: -3px 0px 7px #333;
+	box-shadow: -3px 0px 5px #333;
+}
+.accordiongallery.folder .inactive-section a img {	
+	margin-left: -30px;
+}
+.accordiongallery.folder section.inactive-section .accordiongallery-thumbs a {
+	opacity: 0.2;
+}
+/* Vertical Thumbs */
+.accordiongallery.folder section .accordiongallery-thumbs a {
+	display: block;	
+	overflow: hidden;
+	padding: 5px;
+	
+	color: #333;
+	text-align: center;
+	text-decoration: none;	
+	opacity: 0.8;
+}
+.accordiongallery.folder section .accordiongallery-thumbs a:hover {
+	background-color: #f09412;
+	opacity: 1;
+}
+/* Vertical Scrollers */
+.accordiongallery.folder .accordiongallery-scrollup, .accordiongallery.folder .accordiongallery-scrolldown {
+	display: block;
+	height: 14px;
+	margin: 3px 0px;
+	cursor: default;
+	text-indent: -9999px;
+	
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-image: url(folder-arrow-vertical.png);
+	
+	opacity: 0.6;
+}
+.accordiongallery.folder .accordiongallery-scrollup:hover, .accordiongallery.folder .accordiongallery-scrolldown:hover {
+	opacity: 1;
+}
+.accordiongallery.folder .accordiongallery-scrolldown {
+	background-position: bottom center;
+}
+/* Image View */
+.accordiongallery.folder .accordiongallery-preview {	
+	overflow: hidden;
+	position: relative;
+}
+/* Loader */
+.accordiongallery.folder .accordiongallery-loader {
+	position: absolute;
+	display: block;
+	top: 0px;
+	right: 10px;
+	z-index: 99;
+	
+	color: #555;
+	font-size: 10px;
+}
+/* Enlarged Image */
+.accordiongallery.folder .accordiongallery-preview>img {	
+	-moz-box-shadow: 0px 2px 15px #cb7704;
+	-webkit-box-shadow: 0px 2px 15px #cb7704;
+	box-shadow: 0px 2px 15px #cb7704;
+}
+/* Horizontal Scrollers */
+.accordiongallery.folder .accordiongallery-scrollleft, .accordiongallery.folder .accordiongallery-scrollright {		
+	width: 14px;
+	margin: 0px 5px;
+	height: 45px;
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-image: url(folder-arrow-horizontal.png);	
+	opacity: 0.6;
+	
+	text-indent: -9999px;
+}
+.accordiongallery.folder .accordiongallery-scrollright {
+	float: right;
+	background-position: right center;
+}
+.accordiongallery.folder .accordiongallery-scrollleft:hover, .accordiongallery.folder .accordiongallery-scrollright:hover {	
+	opacity: 1;
+}
+/* Horizontal Thumbs */
+/* Note: A px-based width for .accordiongallery-preview-thumbs is mandatory! */
+.accordiongallery.folder .accordiongallery-preview-thumbs {
+	width: 450px;
+	overflow: hidden;
+	position: relative;
+}
+.accordiongallery.folder .accordiongallery-preview-thumbs a {	
+	opacity: 0.7;
+	margin-right: 5px;
+}
+.accordiongallery.folder .accordiongallery-preview-thumbs a img {
+	border: 3px solid #fff;
+}
+.accordiongallery.folder .accordiongallery-preview-thumbs a:hover, .accordiongallery.folder .accordiongallery-preview-thumbs a:focus {
+	opacity: 1;
+}
+.accordiongallery.folder .accordiongallery-preview-scroller a img {
+	width: 50px;
+	height: auto;	
+}
+.accordiongallery.folder .accordiongallery-preview-scroller a p {
+	display: none;
+}
+/* Image Caption */
+.accordiongallery.folder .accordiongallery-preview .image-caption {
+	position: absolute;
+	bottom: 37px;	
+	width: 100%;
+	padding: 5px 0px;	
+	background-color: #cb7704;	
+	background-color: rgba(203, 119, 4, 0.5);
+	
+	cursor: default;
+	color: #000;
+	text-align: center;
+	text-shadow: 0px 1px 1px #fff;
+}

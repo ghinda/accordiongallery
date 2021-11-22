@@ -1,0 +1,252 @@
+/*
+Polaroid Theme for
+Accordion Gallery
+
+Ghinda - Cristian Colceriu
+www.ghinda.net
+
+v1.0 - 7:40 PM 11/8/2010
+*/
+
+/* Embed Font */
+@font-face {
+	font-family: 'jrhandRegular';
+	src: url('jr!ha___-webfont.eot');
+	src: local('☺'), url('jr!ha___-webfont.woff') format('woff'), url('jr!ha___-webfont.ttf') format('truetype'), url('jr!ha___-webfont.svg#webfontCkXtjCv7') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+/* General */
+.accordiongallery.polaroid {
+	overflow: hidden;
+	padding: 5px;
+
+	font-family: 'jrhandRegular', Arial, Helvetica, 'Bitstream Vera Sans', sans-serif;	
+	font-size: 14px;
+	color: #fff;
+}
+/* Sections */
+.accordiongallery.polaroid section h1 {
+	margin: 0px;
+	padding: 5px 15px;
+	
+	color: #333;
+	font-weight: bold;
+	font-size: 24px;
+	text-shadow: 0px 1px 1px #eacfad;
+	text-align: center;	
+	cursor: default;	
+}
+.accordiongallery.polaroid section {
+	position: relative;
+	width: 160px;
+	margin-right: 3px;
+	background-color: #fff;
+	padding-bottom: 10px;	
+	background: url(wood-background.jpg);
+	
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;	
+	-moz-box-shadow: 1px 2px 3px #555;
+	-webkit-box-shadow: 1px 2px 3px #555;
+	box-shadow: 1px 2px 3px #555;
+}
+.accordiongallery.polaroid .inactive-section {
+	-moz-box-shadow: inset 0px 0px 120px #3b2300, 1px 2px 3px #555;
+	-webkit-box-shadow: inset 0px 0px 120px #3b2300, 1px 2px 3px #555;
+	box-shadow: inset 0px 0px 120px #3b2300, 1px 2px 3px #555;	
+}
+.accordiongallery.polaroid .inactive-section:hover {
+	-moz-box-shadow: inset 0px 0px 80px #3b2300, 1px 2px 3px #555;
+	-webkit-box-shadow: inset 0px 0px 80px #3b2300, 1px 2px 3px #555;
+	box-shadow: inset 0px 0px 80px #3b2300, 1px 2px 3px #555;	
+}
+.accordiongallery.polaroid .inactive-section h1 {
+	font-size: 14px;
+	
+	-webkit-transition: all 500ms ease-in-out;
+	-moz-transition: all 500ms ease-in-out;
+	-o-transition: all 500ms ease-in-out;
+	transition: all 500ms ease-in-out;
+}
+/* Vertical Thumbs */
+.accordiongallery.polaroid section .accordiongallery-thumbs a {
+	display: block;	
+	overflow: hidden;
+	padding: 5px;
+	margin: 10px;	
+	background-color: #fff;
+	
+	color: #444;
+	font-weight: normal;
+	text-align: center;
+	text-decoration: none;
+	
+	-moz-box-shadow: 1px 1px 2px #555;
+	-webkit-box-shadow: 1px 1px 2px #555;
+	box-shadow: 1px 1px 2px #555;	
+	-webkit-transform: rotate(-2deg);
+	-moz-transform: rotate(-2deg);
+	transform: rotate(-2deg);
+}
+.accordiongallery.polaroid section .accordiongallery-thumbs a:nth-child(even) {
+	-webkit-transform: rotate(2deg);
+	-moz-transform: rotate(2deg);
+	transform: rotate(2deg);
+}
+.accordiongallery.polaroid section .accordiongallery-thumbs a:nth-child(3n) {
+	-webkit-transform: rotate(5deg);
+	-moz-transform: rotate(5deg);
+	transform: rotate(5deg);
+}
+.accordiongallery.polaroid section .accordiongallery-thumbs a img {
+	border: 0px;
+}
+.accordiongallery.polaroid section .accordiongallery-thumbs a p {
+	margin: 0px;
+	
+	font-size: 14px;
+	letter-spacing: -1px;
+}
+.accordiongallery.polaroid .accordiongallery-thumbs {
+	padding-bottom: 15px;
+}
+.accordiongallery.polaroid .inactive-section .accordiongallery-thumbs a {
+	opacity: 0.8;
+}
+.accordiongallery.polaroid .inactive-section .accordiongallery-thumbs a img {
+	width: 90px;
+	height: auto;
+}
+.accordiongallery.polaroid section .accordiongallery-thumbs a:hover {
+	background-color: #fcbe4f;	
+}
+/* Vertical Scroller */
+.accordiongallery.polaroid .accordiongallery-scrollup, .accordiongallery.polaroid .accordiongallery-scrolldown {
+	display: block;
+	height: 10px;
+	cursor: default;
+	text-indent: -9999px;
+	
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-image: url(polaroid-arrow-vertical.png);
+	
+	opacity: 0.5;
+}
+.accordiongallery.polaroid .accordiongallery-scrollup:hover, .accordiongallery.polaroid .accordiongallery-scrolldown:hover {
+	opacity: 1;
+}
+.accordiongallery.polaroid .accordiongallery-scrolldown {
+background-position: bottom center;
+}
+/* Image View */
+.accordiongallery.polaroid .accordiongallery-preview {	
+	overflow: hidden;
+	opacity: 0;
+}
+/* Loader */
+.accordiongallery.polaroid .accordiongallery-loader {
+	position: absolute;
+	display: block;
+	top: 200px;
+	left: 230px;
+	width: 75px;
+	height: 20px;
+	z-index: 10;
+	text-indent: -999px;
+	
+	background-color: #fff;
+	background-image: url(polaroid-loader.gif);
+	background-repeat: no-repeat;	
+	background-position: center center;
+	
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+/* Enlarged Image */
+.accordiongallery.polaroid .accordiongallery-preview .accordiongallery-active-image {
+	position: relative;
+	padding: 10px 10px 60px 10px;
+	margin: 5px;
+	background-color: #fff;		
+	z-index: 1;
+	
+	-moz-box-shadow: 1px 1px 2px #555;
+	-webkit-box-shadow: 1px 1px 2px #555;
+	box-shadow: 1px 1px 2px #555;
+}
+/* Horizontal Scroller */
+.accordiongallery.polaroid .accordiongallery-scrollleft, .accordiongallery.polaroid .accordiongallery-scrollright {		
+	width: 10px;
+	height: 50px;	
+	text-indent: -9999px;
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-image: url(polaroid-arrow-horizontal.png);	
+	opacity: 0.6;
+}
+.accordiongallery.polaroid .accordiongallery-scrollright {
+	float: right;
+	background-position: right center;
+}
+.accordiongallery.polaroid .accordiongallery-scrollleft:hover, .accordiongallery.polaroid .accordiongallery-scrollright:hover {
+	opacity: 1;
+}
+.accordiongallery.polaroid .accordiongallery-preview-scroller {
+	padding: 5px 2px;
+}
+/* Horizontal Thumbs */
+.accordiongallery.polaroid .accordiongallery-preview-thumbs {
+	width: 510px;
+}
+.accordiongallery.polaroid .accordiongallery-preview-thumbs a {
+	padding: 5px;
+	margin-right: 5px;
+	background-color: #fff;
+	
+	-moz-box-shadow: 1px 1px 2px #555;
+	-webkit-box-shadow: 1px 1px 2px #555;
+	box-shadow: 1px 1px 2px #555;	
+	-webkit-transform: rotate(-2deg);
+	-moz-transform: rotate(-2deg);
+	transform: rotate(-2deg);
+}
+.accordiongallery.polaroid .accordiongallery-preview-thumbs a:nth-child(even) {
+	-webkit-transform: rotate(2deg);
+	-moz-transform: rotate(2deg);
+	transform: rotate(2deg);
+}
+.accordiongallery.polaroid .accordiongallery-preview-thumbs a:nth-child(3n) {
+	-webkit-transform: rotate(5deg);
+	-moz-transform: rotate(5deg);
+	transform: rotate(5deg);
+}
+.accordiongallery.polaroid .accordiongallery-preview-thumbs a img {
+	border: 0px;
+}
+.accordiongallery.polaroid .accordiongallery-preview-thumbs a:hover {
+	background-color: #fcbe4f;
+}
+.accordiongallery.polaroid .accordiongallery-preview-scroller a img {
+	width: 50px;
+	height: auto;
+}
+.accordiongallery.polaroid .accordiongallery-preview-scroller a p {
+	display: none;
+}
+/* Image Caption */
+.accordiongallery.polaroid .accordiongallery-preview .image-caption {	
+	position: absolute;
+	top: 420px;
+	left: 15px;
+	width: 500px;	
+	
+	cursor: default;
+	color: #000;
+	text-align: center;		
+	
+	z-index: 2;
+}

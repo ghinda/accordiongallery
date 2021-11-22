@@ -1,0 +1,147 @@
+/*
+Square Theme
+for Accordion Gallery
+
+Ghinda - Cristian Colceriu
+www.ghinda.net
+
+v1.0 - 7:40 PM 11/8/2010
+*/
+
+/* General */
+.accordiongallery.square {
+	overflow: hidden;
+	padding: 5px;
+
+	font-family: 'Myriad Pro', Arial, Helvetica, 'Bitstream Vera Sans', sans-serif;	
+	font-size: 11px;
+	color: #fff;
+}
+/* Sections */
+.accordiongallery.square section h1 {
+	margin: 0px;
+	padding: 10px 15px;	
+		
+	font-size: 32px;
+	font-weight: normal;
+	cursor: default;
+}
+.accordiongallery.square section {
+	position: relative;
+	width: 180px;	
+	margin-right: 1px;
+	background-color: #2474b1;
+}
+.accordiongallery.square .inactive-section:hover {	
+	background-color: #000;
+}
+/* Vertical Thumbs */
+.accordiongallery.square section .accordiongallery-thumbs a {
+	display: block;	
+	overflow: hidden;
+	padding: 5px;		
+		
+	color: #fff;
+	font-size: 14px;
+	font-weight: normal;
+	text-align: center;
+	text-decoration: none;
+}
+.accordiongallery.square section .accordiongallery-thumbs a img {
+	border: 0px;
+	width: 90%;
+}
+.accordiongallery.square section .accordiongallery-thumbs a p {
+	margin: 0px;
+}
+.accordiongallery.square section .accordiongallery-thumbs a:hover {
+	background-color: #282828;	
+}
+/* Vertical Scroller */
+.accordiongallery.square .accordiongallery-scrollup, .accordiongallery.square .accordiongallery-scrolldown {
+	display: block;	
+	padding: 5px 0px;
+	cursor: default;
+	opacity: 0.6;
+	
+	font-size: 11px;	
+	text-align: center;
+}
+.accordiongallery.square .accordiongallery-scrollup:hover, .accordiongallery.square .accordiongallery-scrolldown:hover {
+	opacity: 1;
+}
+/* Image View */
+.accordiongallery.square .accordiongallery-preview {	
+	overflow: hidden;
+	opacity: 0;
+}
+/* Loader */
+.accordiongallery.square .accordiongallery-loader {
+	position: absolute;
+	display: block;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	text-indent: -999px;
+		
+	background-image: url(square-loader.gif);
+	background-repeat: no-repeat;	
+	background-position: center center;
+}
+/* Enlarged Image */
+.accordiongallery.square .accordiongallery-preview .accordiongallery-active-image {
+	position: relative;	
+	margin-bottom: 10px;
+	z-index: 1;
+}
+/* Horizontal Scrollers */
+.accordiongallery.square .accordiongallery-scrollleft, .accordiongallery.square .accordiongallery-scrollright {		
+	width: 40px;
+	height: 35px;	
+	opacity: 0.6;
+	
+	font-size: 11px;
+	text-align: center;
+}
+.accordiongallery.square .accordiongallery-scrollright {
+	float: right;
+}
+.accordiongallery.square .accordiongallery-scrollleft:hover, .accordiongallery.square .accordiongallery-scrollright:hover {	
+	opacity: 1;
+}
+/* Horizontal Thumbs */
+.accordiongallery.square .accordiongallery-preview-thumbs {
+	width: 420px;
+}
+.accordiongallery.square .accordiongallery-preview-thumbs a {
+	margin-right: 5px;	
+	opacity: 0.7;
+}
+.accordiongallery.square .accordiongallery-preview-thumbs a img {
+	border: 0px;
+}
+.accordiongallery.square .accordiongallery-preview-thumbs a:hover {
+	opacity: 1;
+}
+.accordiongallery.square .accordiongallery-preview-scroller a img {
+	width: 50px;
+	height: auto;
+}
+.accordiongallery.square .accordiongallery-preview-scroller a p {
+	display: none;
+}
+/* Image Caption */
+.accordiongallery.square .accordiongallery-preview .image-caption {
+	position: absolute;
+	margin-top: -44px;
+	width: 500px;
+	padding: 10px 0px;		
+	background-color: #000;
+	background-color: rgba(0, 0, 0, 0.7);
+	
+	cursor: default;	
+	text-align: center;	
+	
+	z-index: 2;
+}

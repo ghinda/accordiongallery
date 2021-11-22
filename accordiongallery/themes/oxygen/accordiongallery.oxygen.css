@@ -1,0 +1,211 @@
+/*
+Oxygen Theme
+for Accordion Gallery
+
+Inspired by KDE's Oxygen
+www.kde.org
+
+Ghinda - Cristian Colceriu
+www.ghinda.net
+
+v1.0 - 7:40 PM 11/8/2010
+*/
+
+/* General */
+.accordiongallery.oxygen {
+	overflow: hidden;
+	padding: 5px;
+
+	font-family: Arial, Helvetica, 'Bitstream Vera Sans', sans-serif;	
+	font-size: 11px;
+	color: #fff;
+}
+/* Sections */
+.accordiongallery.oxygen section h1 {
+	margin: 0 0 5px 0;
+	padding: 5px;
+	background-color: #1b1b1b;
+	border-bottom: 1px solid #333333;
+	
+	cursor: default;
+	font-size: 13px;
+	line-height: 1em;	
+	
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;	
+}
+.accordiongallery.oxygen section {
+	position: relative;
+	width: 150px;
+	padding: 5px;
+	border: 1px solid #bdc2c5;
+	margin-right: 5px;
+	background-color: #1e201f;	
+	background-image: -moz-linear-gradient(top, #030303, #1e201f);
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #030303),color-stop(1, #1e201f));
+	
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-moz-box-shadow: 0px 0px 4px #002b3f;
+	-webkit-box-shadow: 0px 0px 4px #002b3f;
+	box-shadow: 0px 0px 4px #002b3f;
+}
+.accordiongallery.oxygen section:hover {
+	-moz-box-shadow: 0px 0px 8px #000;
+	-webkit-box-shadow: 0px 0px 8px #000;
+	box-shadow: 0px 0px 8px #000, inset 0px 60px 50px #030303;
+}
+.accordiongallery.oxygen .active-section {
+	background-color: #1e201f;
+}
+.accordiongallery.oxygen .inactive-section a {
+	opacity: 0.5;	
+}
+/* Vertical Thumbs */
+.accordiongallery.oxygen section .accordiongallery-thumbs a {
+	display: block;
+	overflow: hidden;
+	padding: 5px;
+	margin: 4px;
+		
+	color: #868686;
+	font-weight: normal;
+	text-align: center;
+	text-decoration: none;
+	
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;	
+	-webkit-transition: all 500ms ease-in-out;
+	-moz-transition: all 500ms ease-in-out;
+	-o-transition: all 500ms ease-in-out;
+	transition: all 500ms ease-in-out;
+}
+.accordiongallery.oxygen section .accordiongallery-thumbs a img {
+	border: 0px;
+}
+.accordiongallery.oxygen section .accordiongallery-thumbs a p {
+	margin: 0px;
+}
+.accordiongallery.oxygen section .accordiongallery-thumbs a:hover {
+	background-color: #1b1b1b;
+	color: #fff;
+}
+/* Vertical Scroller */
+.accordiongallery.oxygen .accordiongallery-scrollup, .accordiongallery.oxygen .accordiongallery-scrolldown {
+	display: block;
+	height: 10px;
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-image: url(oxygen-arrow-vertical.png);
+	opacity: 0.6;
+	cursor: default;
+	text-indent: -9999px;
+}
+.accordiongallery.oxygen .accordiongallery-scrollup:hover, .accordiongallery.oxygen .accordiongallery-scrolldown:hover {
+	opacity: 1;
+}
+.accordiongallery.oxygen .accordiongallery-scrolldown {
+	background-position: bottom center;
+}
+/* Image View */
+.accordiongallery.oxygen .accordiongallery-preview {	
+	overflow: hidden;
+	opacity: 0;
+	-webkit-transition: all 500ms ease-in-out;
+	-moz-transition: all 500ms ease-in-out;
+	-o-transition: all 500ms ease-in-out;
+	transition: all 500ms ease-in-out;
+}
+/* Loader */
+.accordiongallery.oxygen .accordiongallery-loader {
+	position: absolute;
+	display: block;
+	top: -5px;
+	right: 10px;
+	width: 20px;
+	height: 20px;
+	z-index: 10;
+	text-indent: -999px;
+	
+	background-image: url(oxygen-loader.gif);
+	background-repeat: no-repeat;	
+}
+/* enlarged Image */
+.accordiongallery.oxygen .accordiongallery-preview .accordiongallery-active-image {
+	position: relative;	
+	margin-bottom: 10px;
+	z-index: 1;
+}
+/* Horizontal Scroller */
+.accordiongallery.oxygen .accordiongallery-scrollleft, .accordiongallery.oxygen .accordiongallery-scrollright {		
+	width: 10px;
+	height: 65px;	
+	text-indent: -9999px;	
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-image: url(oxygen-arrow-horizontal.png);
+	opacity: 0.6;
+}
+.accordiongallery.oxygen .accordiongallery-scrollright {
+	float: right;
+	background-position: right center;
+}
+.accordiongallery.oxygen .accordiongallery-scrollleft:hover, .accordiongallery.oxygen .accordiongallery-scrollright:hover {	
+	opacity: 1;
+}
+/* Horizontal Thumbs */
+.accordiongallery.oxygen .accordiongallery-preview-thumbs {
+	width: 455px;
+	padding: 10px;
+	overflow: hidden;
+	position: relative;	
+	border: 1px solid #333;	
+	background-color: #030303;	
+	background-image: -moz-linear-gradient(top, #030303, #1e201f);
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #030303),color-stop(1, #1e201f));
+	
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+.accordiongallery.oxygen .accordiongallery-preview-thumbs a {
+	margin-right: 10px;	
+	opacity: 0.7;
+}
+.accordiongallery.oxygen .accordiongallery-preview-thumbs a img {
+	border: 0px;
+}
+.accordiongallery.oxygen .accordiongallery-preview-thumbs a:hover {
+	opacity: 1;
+}
+.accordiongallery.oxygen .accordiongallery-preview-scroller a img {
+	width: 70px;
+	height: auto;
+}
+.accordiongallery.oxygen .accordiongallery-preview-scroller a p {
+	display: none;
+}
+.accordiongallery.oxygen .accordtiongallery-active-image, .accordiongallery.oxygen .accordiongallery-preview {
+	-webkit-transition: all 500ms ease-in-out;
+	-moz-transition: all 500ms ease-in-out;
+	-o-transition: all 500ms ease-in-out;
+	transition: all 500ms ease-in-out;
+}
+
+.accordiongallery.oxygen .accordiongallery-preview .image-caption {
+	position: absolute;
+	margin-top: -44px;
+	width: 500px;
+	padding: 10px 0px;	
+	background-color: #000;
+	background-color: rgba(0, 0, 0, 0.7);
+	
+	cursor: default;
+	color: #efefef;
+	text-align: center;
+	text-shadow: 0px 1px 1px #000;
+	z-index: 2;
+}

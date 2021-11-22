@@ -1,0 +1,184 @@
+/*
+Element Theme
+for Accordion Gallery
+
+Inspired by the Elementary Project
+http://www.elementary-project.com/
+
+Ghinda - Cristian Colceriu
+www.ghinda.net
+
+v1.0 - 7:40 PM 11/8/2010
+*/
+
+/* General */
+.accordiongallery.element {
+	overflow: hidden;
+	padding: 10px;
+	
+	font-family: Arial, Helvetica, 'Bitstream Vera Sans', sans-serif;
+	font-size: 11px;
+}
+/* Sections */
+.accordiongallery.element section h1 {
+	margin: 0px;
+	padding: 10px;
+	cursor: default;
+	
+	color: #404040;
+	font-weight: normal;
+	font-size: 16px;
+	text-align: center;
+	line-height: 1em;
+	text-shadow: 0px 1px 0px #e6e6e6;
+}
+.accordiongallery.element section {
+	position: relative;
+	width: 150px;	
+	border: 1px solid #e6e6e6;
+	margin-right: 3px;	
+	background-color: #d0d0da;
+	
+	background-image: -moz-linear-gradient(top, #d6d6d6, #cccccc);
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #d6d6d6),color-stop(1, #cccccc));	
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-moz-box-shadow: 0px 0px 6px #333; 
+	-webkit-box-shadow: 0px 0px 6px #333;
+	box-shadow: 0px 0px 6px #333;
+}
+.accordiongallery.element section:hover {
+	background: #ebebeb;
+	
+	-moz-box-shadow: 0px 0px 12px #111;
+	-webkit-box-shadow: 0px 0px 12px #111;
+	box-shadow: 0px 0px 12px #111;
+}
+.accordiongallery.element .active-section {
+	background-color: #d0d0da;
+}
+.accordiongallery.element .inactive-section a img {	
+	margin-left: -30px;
+}
+/* Vertical Thumbs */
+.accordiongallery.element section .accordiongallery-thumbs a {
+	display: block;	
+	overflow: hidden;
+	padding: 5px;	
+	border-top: 1px solid #c5ccd2;
+	background-color: #ebebeb;
+	
+	color: #555;
+	text-align: center;
+	text-decoration: none;	
+}
+.accordiongallery.element section .accordiongallery-thumbs a:hover {
+	background-color: #cfd5da;
+}
+/* Vertical Scrollers */
+.accordiongallery.element .accordiongallery-scrollup, .accordiongallery.element .accordiongallery-scrolldown {
+	display: block;
+	cursor: default;
+	height: 10px;
+	text-indent: -9999px;
+	
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-image: url(element-arrow-vertical.png);
+	
+	opacity: 0.6;
+}
+.accordiongallery.element .accordiongallery-scrollup:hover, .accordiongallery.element .accordiongallery-scrolldown:hover {
+	opacity: 1;
+}
+.accordiongallery.element .accordiongallery-scrolldown {
+	background-position: bottom center;
+}
+/* Image View */
+.accordiongallery.element .accordiongallery-preview {	
+	position: relative;
+}
+/* Loader */
+.accordiongallery.element .accordiongallery-loader {
+	position: absolute;
+	display: block;
+	top: 0px;
+	right: 10px;
+	width: 16px;
+	height: 16px;
+	background-image: url(element-loader.gif);
+	background-repeat: no-repeat;
+	z-index: 99;
+
+	text-indent: -999px;
+}
+/* Enlarged Image */
+.accordiongallery.element .accordiongallery-preview>img {	
+	border-bottom: 1px solid #b2b2b2;
+}
+/* Horizontal Scrollers */
+.accordiongallery.element .accordiongallery-scrollleft, .accordiongallery.element .accordiongallery-scrollright {		
+	width: 10px;
+	height: 75px;
+	margin-left: 5px;
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-image: url(element-arrow-horizontal.png);	
+	opacity: 0.6;
+	
+	text-indent: -9999px;
+}
+.accordiongallery.element .accordiongallery-scrollright {
+	float: right;
+	margin-left: 0px;
+	margin-right: 5px;
+	background-position: right center;
+}
+.accordiongallery.element .accordiongallery-scrollleft:hover, .accordiongallery.element .accordiongallery-scrollright:hover {	
+	opacity: 1;
+}
+/* Horizontal Thumbs */
+/* Note: A px-based width for .accordiongallery-preview-thumbs is mandatory! */
+.accordiongallery.element .accordiongallery-preview-thumbs {
+	width: 470px;
+	overflow: hidden;
+	position: relative;
+}
+.accordiongallery.element .accordiongallery-preview-thumbs a {	
+	opacity: 0.7;
+}
+.accordiongallery.element .accordiongallery-preview-thumbs a img {
+	border: 0px;
+}
+.accordiongallery.element .accordiongallery-preview-thumbs a:hover, .accordiongallery.element .accordiongallery-preview-thumbs a:focus {
+	opacity: 1;
+}
+.accordiongallery.element .accordiongallery-preview-scroller a img {
+	width: 100px;
+	height: auto;
+}
+.accordiongallery.element .accordiongallery-preview-scroller a p {
+	display: none;
+}
+/* Image Caption */
+.accordiongallery.element .accordiongallery-preview .image-caption {
+	position: absolute;
+	bottom: 0px;
+	left: 5%;
+	width: 90%;
+	padding: 5px 0px;
+	border: 1px solid #a0a0a0;
+	background-color: #f8f8f8;
+	background-image: -moz-linear-gradient(top, #f8f8f8, #d8d8d8);
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #f8f8f8),color-stop(1, #d8d8d8));
+	
+	cursor: default;
+	color: #000;
+	text-align: center;
+	text-shadow: 0px 1px 1px #fff;
+	
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}

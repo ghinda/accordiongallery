@@ -1,0 +1,59 @@
+/*
+Accordion Gallery Examples
+Ghinda - Cristian Colceriu
+www.ghinda.net
+
+v1.0 - 7:40 PM 11/8/2010
+*/
+
+html {
+	height: 100%;
+	background-color: #eee;
+	
+	font-family: Arial, Helvetica, sans-serif;	
+	color: #000;
+}
+
+body {	
+	height: 100%;
+	margin: 0px;
+	padding: 0px;	
+}
+
+.dark {
+	background-color: #333;
+}
+
+.wood {
+	background-color: #864e2f;
+}
+
+/* header */
+
+header {
+	display: block;
+	overflow: hidden;
+	padding: 10px;
+	margin-bottom: 10px;
+	
+	border-bottom: 1px solid #aaa;
+	background-color: #ddd;
+	background-image: -moz-linear-gradient(top, #eee, #ddd); 
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #eee),color-stop(1, #ddd)); 
+}
+
+header a {
+	float: left;
+}
+
+header p {
+	float: right;
+	margin: 0px;
+}
+
+/* galleries */
+
+#gallery {
+	width: 960px;
+	margin: 0px auto;
+}

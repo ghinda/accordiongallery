@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />      
+	<title>Accordion Gallery - Documentation</title>		
+	<link rel="stylesheet" href="documentation/sen.full.min.css" type="text/css" />
+	<link rel="stylesheet" href="documentation/accordiongallery.doc.css" type="text/css" />	
+	<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+<body>		
+
+	<article id="home">
+		<header>
+			<p class="item-details">
+				<span class="item-type">Documentation</span>
+				<time>November 8, 2010</time>
+			</p>
+			
+			<div id="hcard-Cristian-Colceriu" class="vcard">
+				<span class="fn">Cristian-Ionut Colceriu</span>
+				<a class="email" href="mailto:contact@ghinda.net">contact@ghinda.net</a>
+				<a class="url" href="http://www.ghinda.net">www.ghinda.net</a>
+				<a href="http://codecanyon.net/user/mokush">CodeCanyon Profile</a>
+			</div>
+			
+			<h1>Accordion Gallery</h1>
+			<p class="sub-title">jQuery Plugin</p>			
+		</header>
+		
+		<section>
+			<nav>
+				<ul>
+					<li><a href="#features">Features</a></li>
+					<li><a href="#examples">Examples</a></li>
+					<li><a href="#how-to-use">How to use</a></li>
+					<li><a href="#options">Available options</a></li>
+					<li><a href="#themes">Themes</a></li>
+					<li><a href="#support">Support</a></li>					
+				</ul>
+			</nav>
+			
+			<p>Accordion Gallery is a lightweight jQuery plugin, providing a unique and innovative image gallery, with rich effects, semantic markup, and accessibility in mind. </p>
+			<p>Using HTML5 markup, CSS3 properties and transitions where available, and optimized code, Accordion Gallery is both powerful and flexible, being very easy to set up, customize, and even create your own themes.</p>
+			<p>Besides all of this, it includes support for mobile devices, being tested on <strong>Android</strong>, <strong>iOS(iPod Touch, iPhone and iPad)</strong>, <strong>Symbian(Nokia phones)</strong>, <strong>Palm Pre</strong>, and <strong>Opera Mini and Mobile</strong>.</p>
+			<p>Using CSS3 transitions the gallery has the main benefit of being hardware accelerated on mobile devices, making the effects faster and more responsive.</p>
+		</section>
+		
+		<section id="features">
+			<h2>Features</h2>
+			<ul>
+				<li>Full semantic <strong>HTML5</strong> markup</li>
+				<li>Use of <strong>CSS3</strong> transitions(where available) for animations</li>
+				<li>Support for multiple galleries on a page</li>
+				<li>Full standard keyboard navigation</li>
+				<li>Accessible by screen reader or other assistive technology</li>
+				<li>Easy to set up and maintain</li>
+				<li>No less than <strong>7 great looking themes</strong> from the start</li>
+				<li>Very easy to create your own themes with CSS</li>
+				<li>Graceful degradation when JavaScript is not available</li>
+			</ul>
+			
+			<p class="warning">
+				<strong>Notice:</strong> <br/>
+				Some themes use CSS 3 to achieve some of the beautiful effects you can see in the examples. Because of this, when using the included themes, some features such as rounded corners, shadows, and others, will not be present on Internet Explorer 8 and bellow. <br/>
+				This does not affect the actual functionality of the gallery. 
+			</p>
+		</section>
+		
+		<section id="examples">
+			<h2>Examples</h2>
+			<ol>
+				<li><a href="examples/default.html">Defaults with the <em>Air</em> theme</a></li>
+				<li><a href="examples/element.html"><em>Element</em> theme</a></li>
+				<li><a href="examples/folder.html"><em>Folder</em> theme with <code>minSliceWidth</code> and <code>maxSliceHeight</code> options</a></li>
+				<li><a href="examples/minimal.html"><em>Minimal</em> theme and options</a></li>
+				<li><a href="examples/oxygen.html"><em>Oxygen</em> theme with <code>maxHeight</code>, <code>scrollSpeed</code> and <code>minSliceWidth</code></a></li>
+				<li><a href="examples/polaroid.html"><em>Polaroid</em> theme and options</a></li>
+				<li><a href="examples/square.html"><em>Square</em> theme and options</a></li>
+			</ol>
+		</section>
+		
+		<section id="how-to-use">
+			<h2>How to use</h2>
+			
+			<p class="step">1. Use a valid <a href="http://www.webmonkey.com/2010/02/building_web_pages_with_html_5/#Finally.2C_a_doctype_anyone_can_remember">HTML5 DOCTYPE</a></p>
+			<p>Accordion Gallery uses semantic HTML5 markup, therefore you'll have to use a HTML5 doctype. </p>
+			
+			<p class="step">2. Include JavaScript</a></p>
+			<p>As Accordion Gallery is a jQuery plugin, you'll need to include jQuery. You can include it from Google's CDN, without needing to upload it to your own server.</p>
+			<pre><code>&lt;script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"&gt;&lt;/script&gt; </code></pre>
+			
+			<p>Next include Accordion Gallery. </p>			
+			<pre><code>&lt;script type="text/javascript" src="js/jquery.accordiongallery.min.js"&gt;&lt;/script&gt; </code></pre>
+			
+			<p>If you need <strong>support for IE8 and bellow</strong> include the following script in your &lt;head&gt; element above your CSS</p>
+			<pre><code>&lt;!--[if lt IE 9]&gt;
+&lt;script src=&quot;http://html5shim.googlecode.com/svn/trunk/html5.js&quot;&gt;&lt;/script&gt;
+&lt;![endif]--&gt;</code></pre>
+
+			<p class="step">3. Include CSS</a></p>
+			<p>Include the Accordion Gallery core CSS. </p>
+			<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;css/accordiongallery.core.css&quot; type=&quot;text/css&quot; /&gt;</code></pre>
+			<p>Include the theme CSS. <em>Even if you are using the default 'Air' theme, you'll need to include the specific CSS, in this case for the 'Air' theme.</em></p>
+			<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;themes/air/accordiongallery.air.css&quot; type=&quot;text/css&quot; /&gt;</code></pre>
+			
+			<p class="step">4. Create gallery markup</a></p>
+			<p>First, create a wrapper element. I preffer using the HTML5 <code>&lt;article&gt;</code> tag, but you're free to use any tag you want(eg. <code>&lt;div&gt;</code>). </p>
+			<pre><code>&lt;article&gt;</code></pre>
+			<p>Next, create each section/category using <code>&lt;section&gt;</code> tags, and images. </p>
+			<pre><code>&lt;section&gt;	
+	&lt;a href=&quot;/large/image/path.jpg&quot; title=&quot;Longer image caption&quot;&gt;
+		&lt;img src=&quot;thumb/path.jpg&quot; width=&quot;125&quot; height=&quot;90&quot; alt=&quot;alternative text&quot; /&gt;		
+	&lt;/a&gt;
+	&lt;a href=&quot;/large/image/path.jpg&quot; title=&quot;Longer image caption&quot;&gt;
+		&lt;img src=&quot;thumb/path.jpg&quot; width=&quot;125&quot; height=&quot;90&quot; alt=&quot;alternative text&quot; /&gt;		
+	&lt;/a&gt;	
+&lt;/section&gt;</code></pre>
+			<p><strong>Notes </strong></p>
+			<ul>
+				<li>The <code>title</code> attribute provided on the <code>&lt;a&gt;</code> tag is used as the image caption, once it has been enlarged. </li>
+				<li>If you don't provide a <code>title</code>, the image will not have any caption. </li>				
+			</ul>			
+			<p><strong>Other flexibility notes </strong></p>
+			<ul>				
+				<li>You don't necessarily have to use <code>&lt;img&gt;</code> tags inside the anchors. You can use any other markup you want, such as text, other images, flash, or even audio/video content.</li>
+				<li>You can also include any other markup before or after the images, such as other wrappers, titles, or any other markup. </li>
+			</ul>			
+			<p>The markup is extremely flexible and allows for full customization of your gallery. See the code of the <a href="#examples">examples</a> for more possibilities. </p>
+			
+			<p class="step">5. Initialize plugin with jQuery selector</a></p>
+			<p>If you are not familiar with jQuery, please, read this <a href="http://docs.jquery.com/Tutorials:How_jQuery_Works">jQuery tutorial for beginners</a>. </p>
+			<pre><code>&lt;script&gt;
+	$(document).ready(function() {
+		$('#gallery').accordionGallery();
+	});
+&lt;/script&gt;</code></pre>
+			
+			<p>This will initialize the gallery using the default options. See the available options bellow. </p>
+			<p>The <code>#gallery</code> element is <strong>the wrapper of the <code>&lt;section&gt;</code> elements</strong>. </p>
+			
+		</section>
+		
+		<section id="options">
+			<h2>Available options</h2>
+			<p>You can pass options as key/value object when initializing the plugin, to the accordionGallery() function. </p>
+			<table>
+				<thead>
+					<tr>
+						<th class="small-column">Key</td>
+						<th class="small-column">Default value</td>
+						<th>Description</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>theme</td>
+						<td>'air'</td>
+						<td>Theme to be used by gallery. The value is added as an extra class to the gallery wrapper. <strong>Remember to include the theme CSS file</strong></td>
+					</tr>					
+					<tr class="even">
+						<td>maxHeight</td>
+						<td>360</td>
+						<td>Maximum height the thumbs(links) can occupy before adding vertical scroll controls, in <em>px</em>. </td>
+					</tr>
+					<tr>
+						<td>scrollSpeed</td>
+						<td>2000</td>
+						<td>Thumb scrolling speed, in milliseconds. <em>Bigger is slower. </em></td>
+					</tr>
+					<tr class="even">
+						<td>minSliceWidth</td>
+						<td>100</td>
+						<td>The width of the inactive slices(sections/categories), once an image has been enlarged. Value in <em>px</em>. </td>
+					</tr>
+					<tr>
+						<td>maxSliceWidth</td>
+						<td>500</td>
+						<td>The width of the active slice(section/category), once an image has been enlarged. Value in <em>px</em>. </td>
+					</tr>
+					<tr class="even">
+						<td>maxSliceHeight</td>
+						<td>480</td>
+						<td>The height of the active slice(section/category), once an image has been enlarged. Value in <em>px</em>. </td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		
+		<section id="themes">
+			<h2>Themes</h2>
+			<ol>
+				<li><em>air</em> - Clean theme inspired by <a href="http://kde.org">KDE</a>’s Oxygen style</li>
+				<li><em>element</em> - Minimalist theme inspired by <a href="http://www.elementary-project.com/">Elementary Project</a></li>
+				<li><em>folder</em> - Warm theme with shadows and rounded corners</li>
+				<li><em>minimal</em> - Minimal theme with white and pink</li>
+				<li><em>oxygen</em> - Dark theme inspired by <a href="http://kde.org">KDE</a>’s Oxygen style</li>
+				<li><em>polaroid</em> - Polaroid theme with wood and rotated images</li>
+				<li><em>square</em> - Minimalist theme focusing on pictures and text</li>
+			</ol>
+			<p>Check out the <a href="#examples">examples</a> to see them in action. </p>
+		</section>
+		
+		<section id="support">
+			<h2>Support</h2>
+			<p>I'd be glad to help you if you have any related questions. </p>
+			<p>I can also offer support for help with setting up, additional themes or functionality. </p>			
+		</section>
+		
+		<footer>
+			<div class="copy">
+				<p>Some photos are from <a href="http://commons.wikimedia.org/wiki/Commons:Picture_of_the_day">Wikipedia Commons's Picture of the Day</a>. </p>
+				<p>&copy; 2010 Cristian-Ionut Colceriu</p>
+			</div>
+			
+			<strong>Contact: <a href="mailto:contact@ghinda.net">contact@ghinda.net</a></strong>
+			<p class="back-top"><a href="#home">Back to top &uarr;</a>
+		</footer>
+	</article>
+
+</body>
+</html>
